@@ -21,7 +21,7 @@ export default function Home({ searchParams }) {
         </div>
       </section>
 
-      <div className=" w-[35%] h-screen hidden sm:block relative">
+      <div className="w-[35%] h-screen hidden sm:block relative">
         <Image
           className="w-full h-full absolute object-cover"
           fill

@@ -1,6 +1,4 @@
-import PatientForms from "@/components/forms/PatientForms";
 import Image from "next/image";
-import Link from "next/link";
 import thirdCol from "@/public/assets/images/thirdCol.jpg";
 import RegisterForm from "@/components/forms/RegisterForm";
 import { getUser } from "@/lib/functionality";
