@@ -18,7 +18,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import {
   Select,
   SelectContent,
-  SelectItem,
   SelectTrigger,
   SelectValue,
 } from "./ui/select";

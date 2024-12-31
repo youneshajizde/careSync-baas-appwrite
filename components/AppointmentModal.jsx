@@ -11,14 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 import AppointmentForms from "./forms/AppointmentForms";
-function AppointmentModal({
-  type,
-  userId,
-  patientId,
-  appointment,
-  title,
-  description,
-}) {
+function AppointmentModal({ type, userId, patientId, appointment }) {
   const [open, setOpen] = useState(false);
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -33,8 +26,8 @@ function AppointmentModal({
         <DialogHeader>
           <DialogTitle>Schedule the patient</DialogTitle>
           <DialogDescription>
-            You can do some changes with the patient's appointment or just
-            leaving it be
+            You can do some changes with the patient appointment or just leaving
+            it be
           </DialogDescription>
         </DialogHeader>
 
