@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img from "@/files/tick.gif";
+import img from "@/public/assets/images/tick.gif";
 import Link from "next/link";
 function Success() {
   return (

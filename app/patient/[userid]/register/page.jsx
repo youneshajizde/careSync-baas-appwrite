@@ -1,7 +1,7 @@
 import PatientForms from "@/components/forms/PatientForms";
 import Image from "next/image";
 import Link from "next/link";
-import video from "@/files/video3.mp4";
+import thirdCol from "@/public/assets/images/thirdCol.jpg";
 import RegisterForm from "@/components/forms/RegisterForm";
 import { getUser } from "@/lib/functionality";
 export default async function Register({ params: { userid } }) {
@@ -15,13 +15,11 @@ export default async function Register({ params: { userid } }) {
         </div>
       </section>
 
-      <div className="bg-black w-[35%] h-screen hidden sm:block">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          src={require("@/files/video3.mp4")}
+      <div className=" w-[35%] h-screen hidden sm:block relative">
+        <Image
+          className="w-full h-full absolute object-cover"
+          fill
+          src={thirdCol}
         />
       </div>
     </main>

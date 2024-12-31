@@ -1,7 +1,7 @@
 import PatientForms from "@/components/forms/PatientForms";
 import Image from "next/image";
 import Link from "next/link";
-import video from "@/files/video.mp4";
+import firstCol from "@/public/assets/images/firstCol.jpg";
 import PassKeyModal from "@/components/PassKeyModal";
 export default function Home({ searchParams }) {
   const isAdmin = searchParams?.admin === "true";
@@ -21,13 +21,11 @@ export default function Home({ searchParams }) {
         </div>
       </section>
 
-      <div className="bg-black w-[35%] h-screen hidden sm:block">
-        <video
-          className="w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          src={require("@/files/video.mp4")}
+      <div className=" w-[35%] h-screen hidden sm:block relative">
+        <Image
+          className="w-full h-full absolute object-cover"
+          fill
+          src={firstCol}
         />
       </div>
     </main>
