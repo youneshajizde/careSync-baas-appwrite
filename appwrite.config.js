@@ -16,6 +16,20 @@ client
   .setProject(process.env.NEXT_PUBLIC_PROJECT_ID)
   .setKey(process.env.NEXT_PUBLIC_API_KEY);
 
+(async () => {
+  try {
+    await functions.updateCors({
+      allowedOrigins: [
+        "https://care-sync-appwrite.vercel.app",
+        "http://localhost",
+      ],
+    });
+    console.log("CORS settings updated successfully.");
+  } catch (error) {
+    console.error("Error updating CORS settings:", error);
+  }
+})();
+
 export const databases = new sdk.Databases(client);
 export const users = new sdk.Users(client);
 export const messaging = new sdk.Messaging(client);

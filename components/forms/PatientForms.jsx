@@ -35,7 +35,7 @@ const PatientForms = () => {
   });
 
   const onSubmit = async (values) => {
-    setIsLoading(true); // Start loading
+    setIsLoading(true);
 
     try {
       const user = {
