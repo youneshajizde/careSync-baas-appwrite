@@ -56,21 +56,20 @@ function PassKeyModal() {
     }
   };
   return (
-    <AlertDialog open={open} onOpenChange={setOpen} className="rounded-3xl">
-      <AlertDialogContent className="bg-white flex flex-col items-center justify-center space-y-5 rounded-2xl">
+    <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialogContent
+        className="bg-white flex flex-col items-center justify-center space-y-5 rounded-2xl px-4 py-6 w-[90vw] max-w-md md:max-w-lg lg:max-w-xl overflow-y-auto"
+        style={{ maxHeight: "90vh" }}
+      >
         <AlertDialogHeader>
-          <div className="flex  items-center justify-center space-y-3 mb-4">
-            <AlertDialogTitle>
-              Please enter the key (pass is 8 8 8 8 8 8)
-            </AlertDialogTitle>
-          </div>
+          <div className="flex items-center justify-center space-y-3 mb-4"></div>
 
           <div className="flex flex-col items-center justify-center mt-7">
             <InputOTP
               maxLength={6}
               value={passKey}
               onChange={(value) => setPassKey(value)}
-              className="mt-6"
+              className="mt-6 "
             >
               <InputOTPGroup className="gap-3">
                 <InputOTPSlot className="shad-otp-slot" index={0} />
@@ -89,14 +88,17 @@ function PassKeyModal() {
             )}
           </div>
         </AlertDialogHeader>
-        <AlertDialogFooter>
+        <AlertDialogFooter className="flex justify-between w-full">
           <AlertDialogCancel
             onClick={() => closeModal()}
-            className="bg-black text-white rounded-lg"
+            className="bg-black text-white rounded-lg px-4 py-2"
           >
             Cancel
           </AlertDialogCancel>
-          <AlertDialogAction onClick={(e) => validatePassKey(e)}>
+          <AlertDialogAction
+            onClick={(e) => validatePassKey(e)}
+            className="px-4 py-2"
+          >
             Continue
           </AlertDialogAction>
         </AlertDialogFooter>

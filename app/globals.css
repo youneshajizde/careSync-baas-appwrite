@@ -282,7 +282,7 @@
   }
 
   .shad-otp-slot {
-    @apply text-36-bold justify-center flex border border-dark-500 rounded-lg size-16 gap-4 !important;
+    @apply text-36-bold justify-center flex border border-dark-500 rounded-lg size-16 gap-4 w-[45px] h-[45px] !important;
   }
 
   .shad-alert-dialog {
@@ -376,4 +376,11 @@
 
 .PhoneInputInput::placeholder {
   color: #1a1d21;
+}
+@media (max-width: 480px) {
+  .shad-otp-slot {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
 }
